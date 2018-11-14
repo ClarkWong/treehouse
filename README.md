@@ -120,7 +120,7 @@ for (int i = 0; i < maxNumber; i++) {
     students.add(i);
 }
 ```
-* ###### Map：Map 的初始容量计算规则为：【预期的 K-V 对数 / 0.75，向上取商数最接近 2ⁿ】，所以，当 Map 里需要存储 3 对 K-V 时，容量应指定为 4
+* ###### Map：【预期的 K-V 对数 / 0.75，向上取商数最接近 2ⁿ】，所以，当 Map 里需要存储 3 对 K-V 时，容量应指定为 4
 ```Java
 // good
 Map<Integer, String> idAndName = new HashMap<Integer, String>(4);
