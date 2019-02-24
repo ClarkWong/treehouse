@@ -112,9 +112,9 @@ Map<Integer, String> map;
 final int maxNumber = 20;
 
 // good
-List<Integer> numbers = new ArrayList<Integer>(maxNumber);
+List<Integer> numbers = new ArrayList<>(maxNumber);
 // bad
-// List<Integer> numbers = new ArrayList<Integer>();
+// List<Integer> numbers = new ArrayList<>();
 
 for (int i = 0; i < maxNumber; i++) {
     students.add(i);
@@ -123,11 +123,11 @@ for (int i = 0; i < maxNumber; i++) {
 * ###### Map：【预期的 K-V 对数 / 0.75，向上取商数最接近 2ⁿ】，所以，当 Map 里需要存储 3 对 K-V 时，容量应指定为 4
 ```Java
 // good
-Map<Integer, String> idAndName = new HashMap<Integer, String>(4);
+Map<Integer, String> idAndName = new HashMap<>(4);
 // bad
-// Map<Integer, String> idAndName = new HashMap<Integer, String>(3);
+// Map<Integer, String> idAndName = new HashMap<>(3);
 // bad
-// Map<Integer, String> idAndName = new HashMap<Integer, String>();
+// Map<Integer, String> idAndName = new HashMap<>();
 
 idAndName.put(1000, "Jack");
 idAndName.put(1001, "Lisa");
@@ -136,11 +136,11 @@ idAndName.put(1002, "David");
 * ###### Set：Set 其实是一种另类的 Map，其初始容量的计算规则与 Map 相同
 ```Java
 // good
-Set<String> names = new HashSet<String>(4);
+Set<String> names = new HashSet<>(4);
 // bad
-// Set<String> names = new HashSet<String>(3);
+// Set<String> names = new HashSet<>(3);
 // bad
-// Set<String> names = new HashSet<String>();
+// Set<String> names = new HashSet<>();
 
 names.add("Jack");
 names.add("Lisa");
