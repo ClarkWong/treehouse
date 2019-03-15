@@ -120,7 +120,7 @@ for (int i = 0; i < maxNumber; i++) {
     students.add(i);
 }
 ```
-* ###### Map：【预期的 K-V 对数 / 0.75，并向上取商数最接近 2ⁿ】，所以，当 Map 里需要存储 3 对 K-V 时，容量应指定为 4
+* ###### Map：【预期的 K-V 对数 / 0.75，如果商数为 2ⁿ，则直接使用商数；否则，向上取商数最接近 2ⁿ】，所以，当 Map 里需要存储 3 对 K-V 时，容量应指定为 4
 ```Java
 // good
 Map<Integer, String> idAndName = new HashMap<>(4);
